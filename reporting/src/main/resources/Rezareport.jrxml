@@ -1,0 +1,78 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Simple_Blue" language="java" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a88b21a4-27cb-46e2-a8a0-9181a0b2698f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="ZGVwYXJ0bWVudCBBUyAsMjcyLDE0NSxhZGMyZjIwMi1lOWY1LTQzZTItYTYwNi1lZWU4NzBlNjJi&#xa;ODE7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<query language="SQL"><![CDATA[SELECT dept_name,
+	building,
+	budget
+FROM department]]></query>
+	<field name="dept_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="dept_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="dept_name"/>
+	</field>
+	<field name="building" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="building"/>
+		<property name="com.jaspersoft.studio.field.label" value="building"/>
+	</field>
+	<field name="budget" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="budget"/>
+		<property name="com.jaspersoft.studio.field.label" value="budget"/>
+	</field>
+	<background/>
+	<title height="72">
+		<element kind="frame" uuid="b20b1e50-debf-44b7-8482-edf6fbb25ea1" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699">
+			<element kind="staticText" uuid="dae46048-868e-468b-be1a-db17e184cecf" x="20" y="20" width="234" height="43" forecolor="#FFFFFF" fontSize="34.0" bold="true">
+				<text><![CDATA[TITLE]]></text>
+			</element>
+			<element kind="staticText" uuid="f042fa1d-0f6f-4971-8aba-8e4589f7e4fc" x="395" y="43" width="180" height="20" forecolor="#FFFFFF" fontSize="14.0" bold="false" hTextAlign="Right">
+				<text><![CDATA[Add a description here]]></text>
+			</element>
+		</element>
+	</title>
+	<pageHeader height="13"/>
+	<columnHeader height="21">
+		<element kind="line" uuid="4f2c36a6-70cd-4385-9282-290b2a2ec32f" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+		<element kind="staticText" uuid="7a157377-b7cd-49d8-bb54-21f8cc58c869" mode="Opaque" x="0" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[dept_name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fbc22c69-cbcf-4b44-9a09-0bb2d01c5e9d"/>
+		</element>
+		<element kind="staticText" uuid="f5d7b5c6-fafe-4a1d-99dd-e5146b54ff59" mode="Opaque" x="185" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[building]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b4f2f15d-4f48-4f73-95b2-621507d46084"/>
+		</element>
+		<element kind="staticText" uuid="136df832-9b51-49de-8616-6f77fd3f8168" mode="Opaque" x="370" y="0" width="185" height="20" forecolor="#006699" backcolor="#E6E6E6" fontSize="14.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[budget]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c06b7a62-8e3d-445b-aef0-c1dbd50bc2f6"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<element kind="line" uuid="b7728491-1612-40da-aada-6a90995c695b" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			<element kind="textField" uuid="46fe08b7-96a7-4f84-9473-e2805b2aadbd" x="0" y="0" width="185" height="20" fontSize="14.0" textAdjust="StretchHeight">
+				<expression><![CDATA[$F{dept_name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fbc22c69-cbcf-4b44-9a09-0bb2d01c5e9d"/>
+			</element>
+			<element kind="textField" uuid="722ee690-4525-456e-9cc7-da9f9d4b2137" x="185" y="0" width="185" height="20" fontSize="14.0" textAdjust="StretchHeight">
+				<expression><![CDATA[$F{building}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b4f2f15d-4f48-4f73-95b2-621507d46084"/>
+			</element>
+			<element kind="textField" uuid="b5e80892-cd91-4a35-9992-697b1f3d6b1c" x="370" y="0" width="185" height="20" fontSize="14.0" textAdjust="StretchHeight">
+				<expression><![CDATA[$F{budget}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c06b7a62-8e3d-445b-aef0-c1dbd50bc2f6"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter/>
+	<pageFooter height="17">
+		<element kind="textField" uuid="4d725603-0fcf-4dc5-9188-8e6cb6386769" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" hTextAlign="Right">
+			<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+		</element>
+		<element kind="textField" uuid="20fe0aaf-3ff6-424a-91b5-4ab294b76059" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" evaluationTime="Report">
+			<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="5939e7bd-52e5-46c5-a907-d6ca1646d643" x="0" y="4" width="100" height="13" pattern="EEEEE dd MMMMM yyyy">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+	</pageFooter>
+	<summary/>
+</jasperReport>
